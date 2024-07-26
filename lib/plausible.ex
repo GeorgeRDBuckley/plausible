@@ -84,8 +84,6 @@ defmodule Plausible do
 
     body = %{name: event_name, url: url, referrer: referrer, domain: domain, props: props} |> Jason.encode!()
 
-    # TODO handle custom properties
-
     Finch.build(
       :post,
       "#{endpoint}#{path}",
