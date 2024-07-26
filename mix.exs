@@ -4,7 +4,7 @@ defmodule Plausible.MixProject do
   def project do
     [
       app: :plausible,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -30,7 +30,7 @@ defmodule Plausible.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:finch, "~> 0.16.0"},
+      {:finch, "~> 0.18.0"},
       {:bypass, "~> 2.1.0", only: :test},
       {:jason, "~> 1.0"},
       {:ex_doc, "~> 0.30.5", only: :dev, runtime: false},
