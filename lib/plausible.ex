@@ -80,7 +80,9 @@ defmodule Plausible do
 
     event_name = opts[:event_name] || "pageview"
 
-    body = %{name: event_name, url: url, referrer: referrer, domain: domain} |> Jason.encode!()
+    props = opts[:props] || %{}
+
+    body = %{name: event_name, url: url, referrer: referrer, domain: domain, props: props} |> Jason.encode!()
 
     # TODO handle custom properties
 
